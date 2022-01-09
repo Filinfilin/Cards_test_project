@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  border-bottom: 1px solid #d8d8d8;
+  &__image {
+    height: 100%;
+    margin: auto 20px;
+    img {
+      vertical-align: middle;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 1px solid #888888;
+    }
+  }
+  &__personInfo {
+    margin: 0 0 15px;
+    div {
+      margin-left: 10px;
+      font-weight: 100;
+    }
+    &__email {
+    }
+    &__skill {
+    }
+    &__average {
+    }
+  }
+}
