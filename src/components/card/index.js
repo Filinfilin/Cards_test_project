@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./card.module.scss";
 
-const Card = ({ city, email, skill, company, pic, average, firstName, lastName}) => {
+const Card = ({ city, email, skill, company, pic, grades, firstName, lastName}) => {
 
   return (
     <div>
@@ -14,7 +14,7 @@ const Card = ({ city, email, skill, company, pic, average, firstName, lastName})
           <div className={style.card__personInfo__email}> Email: {email}</div>
           <div className={style.card__personInfo__company}>Company: {company}</div>
           <div className={style.card__personInfo__skill}>Skill: {skill}</div>
-          <div className={style.card__personInfo__average}>Average: {average}</div>
+          <div className={style.card__personInfo__average}>Average: {grades[0]}%</div>
         </div>
       </div>
     </div>
