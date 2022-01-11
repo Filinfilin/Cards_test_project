@@ -11,7 +11,7 @@ const Search = () => {
     <div className={style.search}>
       <input
         placeholder="Search by name"
-        onChange={(e) => onchangeHandle(e.target.value.trim())}
+        onChange={(e) => onchangeHandle(e.target.value)}
         value={searchedString}
       ></input>
     </div>

@@ -28,16 +28,17 @@ export const CardsContextProvider = ({ children }) => {
     // This function search for matches in first/last
     // name and store it till the input value changed
     // only if input isnt empty
-    inputValue = inputValue.trim().toLowerCase();
+    inputValue = inputValue.trim().toLowerCase().replace(/\s+/g, "");
     let studentsToShow = [];
     if (inputValue) {
       setShowSearchResults(true);
-      const nameType = { firstName: "firstName", lastName: "lastName" };
       for (let studentIndex in data) {
-        for (const key in nameType) {
-          if (data[studentIndex][key].toLowerCase().startsWith(inputValue)) {
-            studentsToShow.push(data[studentIndex]);
-          }
+        if (
+          `${data[studentIndex].firstName.toLowerCase()}+${data[
+            studentIndex
+          ].lastName.toLowerCase()}`.includes(inputValue)
+        ) {
+          studentsToShow.push(data[studentIndex]);
         }
       }
       let result = _.uniqBy(studentsToShow, "id");
