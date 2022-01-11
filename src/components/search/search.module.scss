@@ -1,0 +1,17 @@
+.search {
+  height: 40px;
+  padding: 10px 10px 0;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  margin: 0 10px;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  z-index: 1;
+  input {
+    height: 40px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0 5px;
+  }
+}

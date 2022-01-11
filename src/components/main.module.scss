@@ -3,8 +3,20 @@
   margin: 15vh 50vh;
   display: flex;
   width: 100%;
+  min-width: 400px;
   border-radius: 10px;
   border: 1px solid #888888;
+  position: relative;
+  box-shadow: 1px 2px 3px #888888;
+  &__error {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+    text-align: cente;
+  }
   &__cards {
     width: 100%;
     display: flex;
@@ -12,7 +24,9 @@
     overflow: hidden;
     overflow-y: scroll;
     border-radius: 10px;
-    box-shadow: 1px 2px 3px #888888;
+    height: 92%;
+    bottom: 0;
+    position: absolute;
     -ms-overflow-style: none; /* IE 11 */
     scrollbar-width: none;
     &::-webkit-scrollbar {

@@ -22,7 +22,7 @@ code {
 h1,
 h2,
 h3,
-h4 { 
+h4 {
   margin: 0.3em 0 0.5em;
   line-height: 1.25;
 }
@@ -57,4 +57,10 @@ a img {
 sup,
 sub {
   line-height: 0;
+}
+input:focus {
+  outline: none;
+}
+input {
+  all: unset;
 }

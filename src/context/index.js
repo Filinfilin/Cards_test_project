@@ -1,7 +1,7 @@
-import { CardContextProvider } from "./card/cardContext";
+import { CardsContextProvider } from "./cards/cardsContext";
 
 
 
 export {
-    CardContextProvider
+    CardsContextProvider
 }

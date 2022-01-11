@@ -1,14 +1,14 @@
 import "./App.css";
 import { Main } from "./components";
-import { CardContextProvider } from "./context";
+import { CardsContextProvider } from "./context";
 
 function App() {
   return (
-    <CardContextProvider>
+    <CardsContextProvider>
       <div className="App">
         <Main />
       </div>
-    </CardContextProvider>
+    </CardsContextProvider>
   );
 }
 
