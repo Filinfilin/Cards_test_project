@@ -3,7 +3,7 @@
   border-bottom: 1px solid #d8d8d8;
   &__image {
     height: 100%;
-    margin: auto 20px;
+    margin: 30px 20px;
     img {
       vertical-align: middle;
       width: 100px;
@@ -12,17 +12,34 @@
       border: 1px solid #888888;
     }
   }
+  &__infoContainer {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    padding: 10px 20px 0 20px;
+    transition: height s linear;
+  }
   &__personInfo {
     margin: 0 0 15px;
+    transition: height 1s ease-in-out;
+    h1 {
+      margin-left: -10px;
+    }
     div {
-      margin-left: 10px;
       font-weight: 100;
     }
-    &__email {
-    }
-    &__skill {
-    }
-    &__average {
-    }
   }
+}
+
+.collapsed {
+  font-size: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  transition: opacity 0.25s, font-size 0.5s 0.25s, margin 0.5s 0.25s,
+    padding 0.5s 0.25s;
+}
+.expanded {
+  transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.5s 0.25s;
 }

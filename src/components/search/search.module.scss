@@ -12,6 +12,12 @@
     width: -webkit-fill-available;
     width: -moz-available;
     border-bottom: 1px solid #d8d8d8;
+    transition: 0.1s ease-in-out;
     padding: 0 5px;
+  }
+  input:focus {
+    transition: 0.2s ease-in-out;
+    outline: none !important;
+    border-bottom: 2px solid #a1a1a1;
   }
 }

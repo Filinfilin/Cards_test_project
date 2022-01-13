@@ -6,8 +6,8 @@ import style from "./main.module.scss";
 import Search from "./search";
 import Spiner from "./spiner";
 
-export const Main = () => {
-  const { cardsToShow, loader, error } = useContext(CardsContext);
+const Main = () => {
+  const { cardsToShow, loader } = useContext(CardsContext);
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
@@ -18,9 +18,15 @@ export const Main = () => {
     if (loader) {
       return <Spiner />;
     } else if (!loader && students.length) {
-      return students.map((item) => <Card {...item} key={item.id} />);
+      return students.map((item) => (
+        <Card {...item} key={item.id} index={item.id} />
+      ));
     } else if (!loader && !students.length) {
-      return <div className={style.main__error}><h1>Nothing Found!</h1></div>;
+      return (
+        <div className={style.main__error}>
+          <h1>Nothing Found!</h1>
+        </div>
+      );
     }
   };
 
@@ -31,3 +37,5 @@ export const Main = () => {
     </div>
   );
 };
+
+export default React.memo(Main);

@@ -1,0 +1,21 @@
+.buttonExpand {
+  position: relative;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  margin: 0.8em;
+  &__flipped {
+    position: absolute;
+    transform: rotate(90deg);
+    transition: 0.3s ease-in-out;
+    height: inherit;
+    width: inherit;
+  }
+
+  &__unFlipped {
+    position: absolute;
+    height: inherit;
+    transition: 0.3s ease-in-out;
+    width: inherit;
+  }
+}

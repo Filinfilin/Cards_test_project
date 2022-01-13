@@ -9,6 +9,7 @@ export const CardsContextProvider = ({ children }) => {
   const [loader, setLoader] = useState(false);
   const [searchedString, setSearchedString] = useState("");
   const [showShowSearchResults, setShowSearchResults] = useState(false);
+  const [expandGradeId, setExpandGradeId] = useState();
 
   useEffect(() => {
     setLoader(true);
@@ -62,6 +63,8 @@ export const CardsContextProvider = ({ children }) => {
         showShowSearchResults,
         setShowSearchResults,
         loader,
+        expandGradeId,
+        setExpandGradeId,
       }}
     >
       {children}
