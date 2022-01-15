@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  border-bottom: 1px solid #d8d8d8;
+  &__image {
+    height: 100%;
+    margin: 30px 20px;
+    img {
+      vertical-align: middle;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 1px solid #888888;
+    }
+  }
+  &__infoContainer {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    padding: 10px 20px 0 20px;
+    transition: height s linear;
+  }
+  &__personInfo {
+    margin: 0 0 15px;
+    transition: height 1s ease-in-out;
+    h1 {
+      margin-left: -10px;
+    }
+    div {
+      font-weight: 100;
+    }
+    &__tagContainer {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: -webkit-fill-available;
+      max-width: -moz-available;
+      &__tag {
+        background-color: #d3d3d3;
+        padding: 10px;
+        height: fit-content;
+        border-radius: 5px;
+        margin: 5px;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+.collapsed {
+  font-size: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  transition: opacity 0.25s, font-size 0.5s 0.25s, margin 0.5s 0.25s,
+    padding 0.5s 0.25s;
+}
+.expanded {
+  transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.5s 0.25s;
+}
