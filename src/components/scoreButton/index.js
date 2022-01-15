@@ -8,7 +8,7 @@ const MinusButton = ({ expand, index, checkForExpand }) => {
   };
 
   return (
-    <div className={style.buttonExpand} onClick={() => rotateMinus(index)}>
+    <button className={style.buttonExpand} onClick={() => rotateMinus(index)}>
       <img
         className={
           expand ? style.buttonExpand__flipped : style.buttonExpand__unFlipped
@@ -22,7 +22,7 @@ const MinusButton = ({ expand, index, checkForExpand }) => {
         src={minus}
         alt="expand_btn"
       />
-    </div>
+    </button>
   );
 };
 

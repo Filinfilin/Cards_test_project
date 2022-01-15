@@ -1,11 +1,11 @@
-import "./App.css";
-import Main from "./components";
+import style from "./app.module.scss";
+import Main from "./components/main";
 import { CardsContextProvider } from "./context";
 
 function App() {
   return (
     <CardsContextProvider>
-      <div className="App">
+      <div className={style.app}>
         <Main />
       </div>
     </CardsContextProvider>

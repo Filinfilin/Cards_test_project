@@ -64,3 +64,8 @@ input:focus {
 input {
   all: unset;
 }
+
+button {
+  all: unset;
+  cursor: pointer;
+}

@@ -1,19 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { CardsContext } from "../../context/cards/cardsContext";
 import style from "./search.module.scss";
+import Input from "../input";
 
-const Search = () => {
-  const { setSearchedString, searchedString } = useContext(CardsContext);
-  const onchangeHandle = (value) => {
-    setSearchedString(value);
+const Search = ({ name, placeHolder }) => {
+  const { setSearch, search } = useContext(CardsContext);
+
+  const onKeyPress = () => {
+    return;
   };
+
+  const onchangeHandler = (e) => {
+    setSearch({ ...search, [e.target.name]: e.target.value });
+  };
+
   return (
     <div className={style.search}>
-      <input
-        placeholder="Search by name"
-        onChange={(e) => onchangeHandle(e.target.value)}
-        value={searchedString}
-      ></input>
+      <Input
+        placeHolder={placeHolder}
+        onchangeHandler={onchangeHandler}
+        name={name}
+        value={name == "name" ? search.name : search.tag}
+        onKeyPress={onKeyPress}
+      />
     </div>
   );
 };
